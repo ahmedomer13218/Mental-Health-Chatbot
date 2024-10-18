@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 
 # Load API keys
 load_dotenv()
-groq_api_key = os.getenv('GROQ_API_KEY')
+groq_api_key ="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"
 
 llm = ChatGroq(groq_api_key=groq_api_key, model='Llama3-70b-8192')
 
