@@ -11,3 +11,4 @@ python-docx
 openpyxl
 SpeechRecognition
 pyttsx3
+git+https://github.com/jleb/pyaudio
