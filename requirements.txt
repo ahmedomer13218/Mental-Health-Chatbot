@@ -9,6 +9,5 @@ pymupdf
 faiss-cpu
 python-docx
 openpyxl
-SpeechRecognition
-pyttsx3
+
 
