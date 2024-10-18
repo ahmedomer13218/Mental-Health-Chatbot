@@ -79,23 +79,6 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
         st.session_state.store[session_id] = ChatMessageHistory()
     return st.session_state.store[session_id]
 
-# Function to record and transcribe voice input
-def voice_input():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.info("Listening... Speak now!")
-        audio = r.listen(source)
-        st.info("Processing...")
-        try:
-            query = r.recognize_google(audio)
-            st.success(f"You said: {query}")
-            return query
-        except sr.UnknownValueError:
-            st.error("Sorry, I couldn't understand that. Please try again.")
-        except sr.RequestError as e:
-            st.error(f"Could not request results; {e}")
-    return ""
-
 # Streamlit UI
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -105,12 +88,6 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 user_prompt = st.chat_input("Enter your questions")
-
-# Add voice input button
-if st.button("Use Voice Input"):
-    voice_query = voice_input()
-    if voice_query:
-        user_prompt = voice_query
 
 with st.sidebar:
     if 'vectors' not in st.session_state:
