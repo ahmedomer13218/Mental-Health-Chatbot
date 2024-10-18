@@ -3,7 +3,6 @@ import os
 import re
 import logging
 import time
-import speech_recognition as sr  # Import SpeechRecognition for voice input
 from langchain_groq import ChatGroq
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains.combine_documents import create_stuff_documents_chain
