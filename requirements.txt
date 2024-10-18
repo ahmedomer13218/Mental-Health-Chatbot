@@ -1,0 +1,14 @@
+langchain
+langchain_community
+langchain_core
+langchain_huggingface
+langchain_groq
+python-dotenv
+streamlit
+pymupdf
+faiss-cpu
+python-docx
+openpyxl
+SpeechRecognition
+pyttsx3
+pyaudio
